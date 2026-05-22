@@ -65,15 +65,7 @@ const PRIORITE_CONFIG = {
 const DAYS = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"];
 const MONTHS = ["Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Decembre"];
 
-const CHANTIERS_62 = [
-  { id: 101, nom: "Renovation toiture Mairie", ville: "Lillers", adresse: "Place de la Republique, 62190 Lillers", lat: 50.5637, lng: 2.4823, statut: "en_cours", priorite: "haute", responsable: "Martin D.", equipes: ["couverture"], progression: 65, date: "2026-05-20", heure: "08:00", duree: 4, notes: "Acces par parking arriere", photos: 3, documents: 2, heures: 42, materiel: ["Echafaudage"], rentabilite: 82},
-  { id: 102, nom: "Extension pavillon Bethune", ville: "Bethune", adresse: "14 rue Pasteur, 62400 Bethune", lat: 50.5313, lng: 2.6403, statut: "planifie", priorite: "normale", responsable: "Pierre M.", equipes: ["maconnerie"], progression: 0, date: "2026-05-28", heure: "07:30", duree: 8, notes: "Permis depose", photos: 0, documents: 3, heures: 0, materiel: ["Betonniere"], rentabilite: 0},
-  { id: 103, nom: "Demolition hangar Aire", ville: "Aire-sur-la-Lys", adresse: "Zone industrielle, 62120 Aire-sur-la-Lys", lat: 50.6378, lng: 2.3967, statut: "en_cours", priorite: "urgente", responsable: "Kevin T.", equipes: ["demolition"], progression: 40, date: "2026-05-18", heure: "06:00", duree: 3, notes: "Amiante traite", photos: 5, documents: 4, heures: 28, materiel: ["Pelleteuse"], rentabilite: 71},
-  { id: 104, nom: "Platrerie residence Saint-Omer", ville: "Saint-Omer", adresse: "12 avenue du General de Gaulle, 62500 Saint-Omer", lat: 50.7472, lng: 2.2572, statut: "planifie", priorite: "normale", responsable: "Julien R.", equipes: ["platrerie"], progression: 0, date: "2026-06-02", heure: "08:00", duree: 5, notes: "Client a contacter la veille", photos: 0, documents: 1, heures: 0, materiel: ["Echafaudage interieur"], rentabilite: 0},
-  { id: 105, nom: "Refection toiture Isbergues", ville: "Isbergues", adresse: "8 rue de la Paix, 62330 Isbergues", lat: 50.6256, lng: 2.4603, statut: "termine", priorite: "normale", responsable: "Emma R.", equipes: ["couverture"], progression: 100, date: "2026-05-05", heure: "08:00", duree: 2, notes: "Termine, client satisfait", photos: 8, documents: 2, heures: 24, materiel: [], rentabilite: 91},
-  { id: 106, nom: "Mecanique chaufferie Merville", ville: "Merville", adresse: "3 rue du Moulin, 59660 Merville", lat: 50.6469, lng: 2.6387, statut: "en_cours", priorite: "haute", responsable: "Hugo V.", equipes: ["mecanique"], progression: 55, date: "2026-05-19", heure: "07:00", duree: 3, notes: "Acces restreint le matin", photos: 2, documents: 1, heures: 18, materiel: ["Outillage specifique"], rentabilite: 68},
-  { id: 107, nom: "Maconnerie ecole Bruay", ville: "Bruay-la-Buissiere", adresse: "Avenue de la Liberte, 62700 Bruay-la-Buissiere", lat: 50.4881, lng: 2.5443, statut: "planifie", priorite: "haute", responsable: "Sophie L.", equipes: ["maconnerie", "platrerie"], progression: 0, date: "2026-06-10", heure: "07:30", duree: 15, notes: "Gros chantier - 2 equipes", photos: 0, documents: 6, heures: 0, materiel: ["Betonniere", "Malaxeur"], rentabilite: 0},
-];
+const CHANTIERS_62 = [];
 
 function Badge({ text, color, bg}) {
   return (
