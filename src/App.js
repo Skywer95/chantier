@@ -2166,15 +2166,15 @@ export default function App() {
         fetchFlotte(),
         loadSetting("darkMode", false),
       ]);
-      if (dbChantiers.length === 0) { await resetChantiersDB(CHANTIERS_62); setChantiers(CHANTIERS_62); }
-      else setChantiers(dbChantiers);
-      if (dbTeams.length === 0) { await resetTeamsDB(INITIAL_TEAMS); setTeams(INITIAL_TEAMS); }
-      else setTeams(dbTeams);
-      if (dbFlotte.length === 0) { await resetFlotteDB(INITIAL_FLOTTE); setFlotte(INITIAL_FLOTTE); }
-      else setFlotte(dbFlotte);
-      setDarkMode(dbDark);
-      setDbLoading(false);
-    })();
+const seeded = await loadSetting("seeded", false);
+if (dbChantiers.length === 0 && !seeded) { await resetChantiersDB(CHANTIERS_62); await saveSetting("seeded", true); setChantiers(CHANTIERS_62); }
+else setChantiers(dbChantiers);
+if (dbTeams.length === 0 && !seeded) { await resetTeamsDB(INITIAL_TEAMS); setTeams(INITIAL_TEAMS); }
+else setTeams(dbTeams);
+if (dbFlotte.length === 0 && !seeded) { await resetFlotteDB(INITIAL_FLOTTE); setFlotte(INITIAL_FLOTTE); }
+else setFlotte(dbFlotte);
+setDarkMode(dbDark);
+setDbLoading(false);
   }, []);
 
   // ── Persistance darkMode ────────────────────────────────────
